@@ -1,0 +1,159 @@
+body{
+	margin: 0;
+	padding: 1%;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 800px;
+	background-image: url("https://i.ytimg.com/vi/Zy85mnTUGmg/maxresdefault.jpg");
+}
+
+
+header{
+	text-align: center;
+}
+
+nav{
+	display: flex;
+	text-align: center;
+}
+
+nav ul{
+	padding: 0;
+	display: flex;
+	list-style-type: none;
+	flex: 2;
+}
+
+nav li {
+	display: inline;
+	text-align: center;
+	flex: 1;
+	background-color: teal;
+	border: 1px solid black;
+}
+
+nav a {
+	display: inline-block;
+	font-size: 5rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	text-shadow: 2px 2px 10px black;
+}
+
+main{
+	
+	text-align: center;
+	padding: 1%;
+}
+
+footer{
+	margin-top: 15%;
+	text-align: center;
+	background-color: darkslategray;
+}
+
+h1{
+
+	font-size: 4rem;
+	color: white;
+	text-shadow: 2px 2px 10px black;
+}
+
+.imagebox img{
+	height: 200px;
+	width: 200px;
+}
+
+.container-row{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.container-row > .container{
+	justify-content: center;
+	text-align: center;
+	height: 450px;
+	width: 15%;
+	padding-top: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	border: 2px solid black;
+	background-color: blanchedalmond;
+	border-radius: 5px;
+}
+
+.container li{
+	margin-right: 30px;
+	text-align: center;
+}
+
+.container h1{
+	font-size: 1rem;
+	color: white;
+	text-shadow: 5px 5px 5px black;
+	background-color: aqua;
+	margin: auto;
+}
+
+.container h4{
+	font-size: 1rem;
+	color: black;
+	margin: auto;
+}
+
+.container h6{
+	color: black;
+	margin: auto;
+}
+
+.button-blue{
+	border-radius: 10px;
+	color: white;
+	background-color: #008CBA;
+	margin: auto;
+}
+
+.container-row > .player-box{
+	justify-content: center;
+	text-align: center;
+	height: 450px;
+	width: 15%;
+	padding-top: 10px;
+	margin-top: 10px;
+}
+
+.container-row > .enemy-box{
+	justify-content: center;
+	text-align: center;
+	height: 450px;
+	width: 15%;
+	padding-top: 10px;
+	margin-top: 10px;
+	margin-left: 500px;
+}
+
+
+.player-hpbar{
+	font-size: 1rem;
+	color: white;
+	text-shadow: 5px 5px 5px black;
+	width: 218px;
+	background-color: grey;
+}
+
+.player-name, .enemy-name, .player-lvl, .enemy-lvl{
+	
+	font-size: 1rem;
+	color: white;
+	text-shadow: 5px 5px 5px black;
+}
+
+.enemy-hpbar{
+	font-size: 1rem;
+	color: white;
+	text-shadow: 5px 5px 5px black;
+	width: 218px;
+	background-color: grey;
+}
