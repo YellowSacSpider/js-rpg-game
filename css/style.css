@@ -63,6 +63,8 @@ h1{
 .imagebox img{
 	height: 200px;
 	width: 200px;
+	border: 2px solid black;
+	border-radius: 5px;
 }
 
 .container-row{
@@ -156,4 +158,35 @@ h1{
 	text-shadow: 5px 5px 5px black;
 	width: 218px;
 	background-color: grey;
+}
+
+.character-box{
+	background-color: grey;
+	height: 600px;
+	width: 800px;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+.character-box h1{
+	font-size: 1.5rem;
+	justify-content: center;
+	text-align: center;
+	color: white;
+	height: 30px;
+	text-shadow: 5px 5px 5px black;
+	background-color: darkgreen;
+	margin: auto;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+}
+
+.equipment-box{
+	background-color: grey;
+	height: 400px;
+	width: 400px;
+	margin-left: 100px;
+	border: 2px solid black;
+	border-radius: 10px;
 }

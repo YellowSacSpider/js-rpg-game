@@ -33,9 +33,9 @@ function SaveToLocalStorage(){
     localStorage.setItem("ClassName", player.ClassName);
     localStorage.setItem("HP", player.HP);
     localStorage.setItem("MAXHP", player.MAXHP);
-    localStorage.setItem("DMG", JSON.stringify(player.DMG));
-    localStorage.setItem("WEAPONDMG", JSON.stringify(player.WEAPONDMG));
-    localStorage.setItem("TOTALDMG", JSON.stringify(player.TOTALDMG));
+    localStorage.setItem("DMG", player.DMG);
+    localStorage.setItem("WEAPONDMG",player.WEAPONDMG);
+    localStorage.setItem("TOTALDMG",player.TOTALDMG);
     localStorage.setItem("Strength", player.Strength);
     localStorage.setItem("Inteligence", player.Inteligence);
     localStorage.setItem("Dextertity", player.Dexterity);
@@ -51,23 +51,23 @@ function SaveToLocalStorage(){
 function LoadLocalStorage(){
 	
 	// Zapisuje do zmiennych wartości z localstorage
-    LocalStorage_id = localStorage.getItem("id");
-    LocalStorage_LVL = localStorage.getItem("LVL");
-    LocalStorage_EXP = localStorage.getItem("EXP");
-    LocalStorage_MAXEXP = localStorage.getItem("MAXEXP");
-    LocalStorage_GOLD = localStorage.getItem("GOLD");
+    LocalStorage_id = parseInt(localStorage.getItem("id"));
+    LocalStorage_LVL = parseInt(localStorage.getItem("LVL"));
+    LocalStorage_EXP = parseInt(localStorage.getItem("EXP"));
+    LocalStorage_MAXEXP = parseInt(localStorage.getItem("MAXEXP"));
+    LocalStorage_GOLD = parseFloat(localStorage.getItem("GOLD"));
     LocalStorage_ClassName = localStorage.getItem("ClassName");
-    LocalStorage_HP = localStorage.getItem("HP");
-    LocalStorage_MAXHP = localStorage.getItem("MAXHP");
-    LocalStorage_DMG = localStorage.getItem("DMG");
-    LocalStorage_WEAPONDMG = localStorage.getItem("WEAPONDMG");
-    LocalStorage_TOTALDMG = localStorage.getItem("TOTALDMG");
-    LocalStorage_Strength = localStorage.getItem("Strength");
-    LocalStorage_Inteligence = localStorage.getItem("Inteligence");
-    LocalStorage_Dextertity = localStorage.getItem("Dextertity");
-    LocalStorage_Charisma = localStorage.getItem("Charisma");
-    LocalStorage_Luck = localStorage.getItem("Luck");
-    LocalStorage_Reputation = localStorage.getItem("Reputation");
+    LocalStorage_HP = parseInt(localStorage.getItem("HP"));
+    LocalStorage_MAXHP = parseInt(localStorage.getItem("MAXHP"));
+    LocalStorage_DMG = parseInt(localStorage.getItem("DMG"));
+    LocalStorage_WEAPONDMG = parseInt(localStorage.getItem("WEAPONDMG"));
+    LocalStorage_TOTALDMG = parseInt(localStorage.getItem("TOTALDMG"));
+    LocalStorage_Strength = parseInt(localStorage.getItem("Strength"));
+    LocalStorage_Inteligence = parseInt(localStorage.getItem("Inteligence"));
+    LocalStorage_Dextertity = parseInt(localStorage.getItem("Dextertity"));
+    LocalStorage_Charisma = parseInt(localStorage.getItem("Charisma"));
+    LocalStorage_Luck = parseInt(localStorage.getItem("Luck"));
+    LocalStorage_Reputation = parseInt(localStorage.getItem("Reputation"));
     LocalStorage_img = localStorage.getItem("img");
 
 	// Ustawia statystyki gracza ze zmiennych

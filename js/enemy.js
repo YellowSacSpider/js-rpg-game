@@ -25,6 +25,8 @@ EnemiesObject = {
 
 //Potwory z areny----------------------------------------------------------//
     szczur: new EnemyGenerator(0, "Szczur", 1, 50, 1, 10, 1, 1, 'images/knurstraszny.jpg'),
+    //ID Przeciwnika, Nazwa przeciwnika, Poziom przeciwnika, Życie przeciwnika, Obrażenia przeciwnika,
+    //Exp z przeciwnika, Złoto z przeciwnika, Reputacja z przeciwnika, Obrazek przeciwnika.
     mleczak: new EnemyGenerator(1, "Mleczak", 5,  200, 1, 50, 10, 5, 'images/majorstraszny.jpg'),
     dzikipies: new EnemyGenerator(2, "Dziki Pies", 3, 150, 1, 25, 5, 10, 'images/majorstraszny.jpg'),
     wilkolak: new EnemyGenerator(3, "Wilkołak", 10, 300, 1, 200, 100, 50, 'images/majorstraszny.jpg')

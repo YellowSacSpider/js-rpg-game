@@ -5,6 +5,6 @@ function PlayerDamage(){
     return player.TOTALDMG + player.WEAPONDMG;
 }
 
-function EnemyDamage(){
-    return 5;
+function EnemyDamage(eDamage){
+    return eDamage;
 }

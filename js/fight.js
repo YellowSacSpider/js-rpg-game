@@ -59,7 +59,7 @@ function PlayerAttack(){
 // Atak przeciwnika
 function EnemyAttack(){
     
-    TempPlayerHP -= EnemyDamage(); // Odejmuje z Zmiennej tymczasowej zwrotną wartość z funkcji EnemyDamage() znajdującej się w damage.js (1)
+    TempPlayerHP -= EnemyDamage(TempEnemyDamage); // Odejmuje z Zmiennej tymczasowej zwrotną wartość z funkcji EnemyDamage() znajdującej się w damage.js (1)
     console.log("Przeciwnik Zadał: " + EnemyDamage() + " Twoje HP: " + TempPlayerHP + "/" + TempPlayerMAXHP); // Debug (2)
 	
 	//Aktualizacja danych wizualnych (3)
