@@ -17,5 +17,5 @@ Dokumentacja silnika i opis naszej gry na której jest silnik dostępna na Wiki.
 
 | **Nick**      | **Github** |
 | --------- | -----:|
-| **Mathias**  | https://github.com/Mathias007 |
 | **YellowSacSpider**     |   https://github.com/YellowSacSpider/ |
+| **Mathias**  | https://github.com/Mathias007 |
