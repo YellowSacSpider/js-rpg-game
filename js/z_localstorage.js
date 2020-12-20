@@ -1,5 +1,7 @@
 //Funkcja zapisywania i wczytywania localstorage
 
+import { hello } from './mymodule';
+let val = hello();
 
 // Przechowują pobrane wartości
 let LocalStorage_id;
