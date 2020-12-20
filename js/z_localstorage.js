@@ -1,7 +1,9 @@
 //Funkcja zapisywania i wczytywania localstorage
-
-import { hello } from './mymodule';
+import { hello } from './mymodule.js';
 let val = hello();
+
+
+console.log(val);
 
 // Przechowują pobrane wartości
 let LocalStorage_id;
@@ -124,3 +126,7 @@ function ClearLocalStorage(){
     localStorage.removeItem("Reputation");
     localStorage.removeItem("img");
 }
+
+export {LoadLocalStorage}
+export {SaveToLocalStorage}
+export {ClearLocalStorage}

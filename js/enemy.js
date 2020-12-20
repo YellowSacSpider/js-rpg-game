@@ -21,7 +21,7 @@ function EnemyGenerator(mid, EnemyName, mLVL, mHP, mDMG, mEXP, mGOLD, mREP, mimg
 }
 
 // Tworzy obiekt z kluczami wraz z konstruktorem
-EnemiesObject = {
+let EnemiesObject = {
 
 //Potwory z areny----------------------------------------------------------//
     szczur: new EnemyGenerator(0, "Szczur", 1, 50, 1, 10, 1, 1, 'images/knurstraszny.jpg'),
@@ -33,6 +33,8 @@ EnemiesObject = {
 //------------------------------------------------------------------------//
 
 };
+
+export {EnemiesObject}
 
 //let szczur = new EnemyGenerator(0, "Szczur", 50, 1);
 //let mleczak = new EnemyGenerator(0, "Mleczak", 200, 1);

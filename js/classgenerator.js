@@ -1,4 +1,5 @@
-//import player from "./player.js";
+//import {LoadLocalStorage} from './z_localstorage.js';
+import {SaveToLocalStorage} from './z_localstorage.js';
 
 function CharClass(id, ClassName, HP, Strength, Inteligence, Dexterity, Charisma, Luck, img)
 {
@@ -28,7 +29,7 @@ let player_assign_menel = Object.assign({}, player, menel);
 let player_assign_mlecznyczlowiek = Object.assign({}, player, mlecznyczlowiek);
 
 //Iteracja tablicy
-for(i = 0; i < CharClassArray.length; ++i)
+for(let i = 0; i < CharClassArray.length; ++i)
 {
     let elem = document.getElementById(CharClassArray[i]) //Zapisanie do zmiennej funkcji z id z tablicy
     

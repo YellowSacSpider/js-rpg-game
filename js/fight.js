@@ -1,3 +1,8 @@
+import {LoadLocalStorage} from './z_localstorage.js';
+import {SaveToLocalStorage} from './z_localstorage.js';
+
+export {setFight}
+
 PlayerStatsActualizator(); // Aktualizuje statystyki po załadowaniu skryptu na stronie
 
 // Funkcja sleep. Po wywołaniu ustawia timer na x milisekund i po odbytym czasie wywołuje funkcje pod nim. Użycie - await sleep(x)
@@ -14,11 +19,13 @@ let TempEnemyMAXHP;
 
 let GlobalObjFight;
 
+let TempEnemyDamage;
+
 // Ustawia walke i zmienne temp
 function setFight(playerObj, enemyObj)
 {
 
-    LoadLocalStorage() // Ładuje dane z localstorage (1)
+    LoadLocalStorage(); // Ładuje dane z localstorage (1)
 
 	// Ustawia zmienne temp
     TempPlayerHP = playerObj.HP;
