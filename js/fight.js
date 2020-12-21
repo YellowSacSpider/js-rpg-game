@@ -1,8 +1,10 @@
 import {LoadLocalStorage} from './z_localstorage.js';
 import {SaveToLocalStorage} from './z_localstorage.js';
+import {ExpCheck} from './level.js';
 
 export {setFight}
 
+ExpCheck();
 PlayerStatsActualizator(); // Aktualizuje statystyki po załadowaniu skryptu na stronie
 
 // Funkcja sleep. Po wywołaniu ustawia timer na x milisekund i po odbytym czasie wywołuje funkcje pod nim. Użycie - await sleep(x)
@@ -24,7 +26,7 @@ let TempEnemyDamage;
 // Ustawia walke i zmienne temp
 function setFight(playerObj, enemyObj)
 {
-
+    ExpCheck();
     LoadLocalStorage(); // Ładuje dane z localstorage (1)
 
 	// Ustawia zmienne temp
@@ -67,7 +69,7 @@ function PlayerAttack(){
 function EnemyAttack(){
     
     TempPlayerHP -= EnemyDamage(TempEnemyDamage); // Odejmuje z Zmiennej tymczasowej zwrotną wartość z funkcji EnemyDamage() znajdującej się w damage.js (1)
-    console.log("Przeciwnik Zadał: " + EnemyDamage() + " Twoje HP: " + TempPlayerHP + "/" + TempPlayerMAXHP); // Debug (2)
+    console.log("Przeciwnik Zadał: " + EnemyDamage(TempEnemyDamage) + " Twoje HP: " + TempPlayerHP + "/" + TempPlayerMAXHP); // Debug (2)
 	
 	//Aktualizacja danych wizualnych (3)
     document.querySelector(".player-hpbar").innerText = `${TempPlayerHP}/${TempPlayerMAXHP}`;
@@ -88,14 +90,15 @@ while(true){
     if (TempEnemyHP <= 0) {
 
         console.log("Wygrałeś!");
-        console.log(GlobalObjFight.mGOLD);
-        console.log(GlobalObjFight.mEXP);
-        console.log(GlobalObjFight.mREP);
+        console.log("Złoto: ", GlobalObjFight.mGOLD);
+        console.log("Exp: ", GlobalObjFight.mEXP);
+        console.log("Rep: ", GlobalObjFight.mREP);
         
         player.GOLD += GlobalObjFight.mGOLD;
         player.EXP += GlobalObjFight.mEXP;
         player.Reputation += GlobalObjFight.mREP;
-        
+
+        ExpCheck();
         SaveToLocalStorage();
         break;
 
