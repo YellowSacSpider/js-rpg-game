@@ -1,5 +1,5 @@
 // Algorytmy matematyczne
-
+export {getRandomNumber}
 
 function getRandomNumber(min, max) {
   min = Math.ceil(min); // Zwraca namniejszą liczbę całkowitą większą lub równą danej np. jak 4 to zwróci 4, jak 0.95 to zwróci 1, jak 7.004 to zwróci 8.

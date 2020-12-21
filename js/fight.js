@@ -1,11 +1,13 @@
 import {LoadLocalStorage} from './z_localstorage.js';
 import {SaveToLocalStorage} from './z_localstorage.js';
 import {ExpCheck} from './level.js';
+import {expTable} from './level.js';
 
 export {setFight}
 
 ExpCheck();
 PlayerStatsActualizator(); // Aktualizuje statystyki po załadowaniu skryptu na stronie
+LoadLocalStorage();
 
 // Funkcja sleep. Po wywołaniu ustawia timer na x milisekund i po odbytym czasie wywołuje funkcje pod nim. Użycie - await sleep(x)
 function sleep(ms) {
@@ -90,13 +92,17 @@ while(true){
     if (TempEnemyHP <= 0) {
 
         console.log("Wygrałeś!");
-        console.log("Złoto: ", GlobalObjFight.mGOLD);
-        console.log("Exp: ", GlobalObjFight.mEXP);
-        console.log("Rep: ", GlobalObjFight.mREP);
         
+        console.log("Złoto: ", GlobalObjFight.mGOLD);
         player.GOLD += GlobalObjFight.mGOLD;
-        player.EXP += GlobalObjFight.mEXP;
-        player.Reputation += GlobalObjFight.mREP;
+        
+        if(player.LVL !== expTable.levels.length){
+            console.log("Exp: ", GlobalObjFight.mEXP);
+            player.EXP += GlobalObjFight.mEXP;
+        }
+
+        console.log("Rep: ", GlobalObjFight.mREP);
+        player.Reputation += GlobalObjFight.mREP;  
 
         ExpCheck();
         SaveToLocalStorage();
