@@ -22,7 +22,12 @@ let LocalStorage_Inteligence;
 let LocalStorage_Dextertity;
 let LocalStorage_Charisma;
 let LocalStorage_Luck;
+let LocalStorage_CriticalChance
+let LocalStorage_AvoidChance
 let LocalStorage_Reputation;
+let LocalStorage_AbilityPoints;
+let LocalStorage_Guild;
+let LocalStorage_Profession;
 let LocalStorage_img;
 
 function SaveToLocalStorage(){
@@ -45,7 +50,12 @@ function SaveToLocalStorage(){
     localStorage.setItem("Dextertity", player.Dexterity);
     localStorage.setItem("Charisma", player.Charisma);
     localStorage.setItem("Luck", player.Luck);
+    localStorage.setItem("CriticalChance", player.CriticalChance);
+    localStorage.setItem("AvoidChance", player.AvoidChance);
     localStorage.setItem("Reputation", player.Reputation);
+    localStorage.setItem("AbilityPoints", player.AbilityPoints);
+    localStorage.setItem("Guild", player.Guild);
+    localStorage.setItem("Profession", player.Profession);
     localStorage.setItem("img", player.img);
 
     // Zapisanie stanu dungeonów
@@ -71,7 +81,12 @@ function LoadLocalStorage(){
     LocalStorage_Dextertity = parseInt(localStorage.getItem("Dextertity"));
     LocalStorage_Charisma = parseInt(localStorage.getItem("Charisma"));
     LocalStorage_Luck = parseInt(localStorage.getItem("Luck"));
+    LocalStorage_CriticalChance = parseInt(localStorage.getItem("CriticalChance"));
+    LocalStorage_AvoidChance = parseInt(localStorage.getItem("AvoidChance"));
     LocalStorage_Reputation = parseInt(localStorage.getItem("Reputation"));
+    LocalStorage_AbilityPoints= parseInt(localStorage.getItem("AbilityPoints"));
+    LocalStorage_Guild = localStorage.getItem("Guild");
+    LocalStorage_Profession = localStorage.getItem("Profession");
     LocalStorage_img = localStorage.getItem("img");
 
 	// Ustawia statystyki gracza ze zmiennych
@@ -91,7 +106,12 @@ function LoadLocalStorage(){
     player.Dexterity = LocalStorage_Dextertity;
     player.Charisma = LocalStorage_Charisma;
     player.Luck = LocalStorage_Luck;
+    player.CriticalChance = LocalStorage_CriticalChance;
+    player.AvoidChance = LocalStorage_AvoidChance;
     player.Reputation = LocalStorage_Reputation;
+    player.AbilityPoints = LocalStorage_AbilityPoints;
+    player.Guild = LocalStorage_Guild;
+    player.Profession = LocalStorage_Profession;
     player.img = LocalStorage_img;
 
     PlayerStatsActualizator(); // Aktualizuje Statystyki gracza

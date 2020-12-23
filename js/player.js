@@ -18,7 +18,12 @@ let player = {
     Dexterity : 0,
     Charisma : 0,
     Luck : 0,
+    CriticalChance : 0,
+    AvoidChance : 0,
     Reputation : 0,
+    AbilityPoints : 0,
+    Guild : 'None',
+    Profession : 'None',
     img : ''
 };
 

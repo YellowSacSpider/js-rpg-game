@@ -2,6 +2,8 @@ import {LoadLocalStorage} from './z_localstorage.js';
 import {SaveToLocalStorage} from './z_localstorage.js';
 import {ExpCheck} from './level.js';
 import {expTable} from './level.js';
+import {PlayerDamage} from './damage.js';
+import {EnemyDamage} from './damage.js';
 
 export {setFight}
 
@@ -59,7 +61,7 @@ function setFight(playerObj, enemyObj)
 function PlayerAttack(){
     
     TempEnemyHP -= PlayerDamage(); // Odejmuje z Zmiennej tymczasowej zwrotną wartość z funkcji PlayerDamage() znajdującej się w damage.js (1)
-    console.log("Zadałeś: " + PlayerDamage() + " HP przeciwnika: " + TempEnemyHP + "/" + TempEnemyMAXHP); //Debug (2)
+    console.log("Zadałeś: " + PlayerDamage() + " HP przeciwnika: " + TempEnemyHP + "/" + TempEnemyMAXHP);
 	
 	// Aktualizacja danych wizualnych (3)
     document.querySelector(".player-hpbar").innerText = `${TempPlayerHP}/${TempPlayerMAXHP}`;
@@ -113,10 +115,11 @@ while(true){
 
     await sleep(1000); // Czeka 1 sekunde
 
-	// Sprawdza czy przeciwnik ma życie mniejsze lub równe zeru
+	// Sprawdza czy gracz ma życie mniejsze lub równe zeru
     if (TempPlayerHP <= 0) {
 
         console.log("Przegrałeś!");
+        ExpCheck();
         SaveToLocalStorage();
         break;
 

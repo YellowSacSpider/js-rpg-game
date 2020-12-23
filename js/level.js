@@ -12,6 +12,7 @@ function ExpCheck()
     {
             player.LVL = expTable.levels[i];
             player.MAXEXP = expTable.exp_value[i+1];
+            player.AbilityPoints += 5;
             ++i;
             SaveToLocalStorage();
 
