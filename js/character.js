@@ -1,5 +1,6 @@
 import {LoadLocalStorage} from './z_localstorage.js';
 import {SaveToLocalStorage} from './z_localstorage.js';
+import {ClearLocalStorage} from './z_localstorage.js';
 import {ExpCheck} from './level.js';
 import {expTable} from './level.js';
 

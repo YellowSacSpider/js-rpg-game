@@ -143,7 +143,12 @@ function ClearLocalStorage(){
     localStorage.removeItem("Dextertity");
     localStorage.removeItem("Charisma");
     localStorage.removeItem("Luck");
+    localStorage.removeItem("CriticalChance");
+    localStorage.removeItem("AvoidChance");
     localStorage.removeItem("Reputation");
+    localStorage.removeItem("AbilityPoints");
+    localStorage.removeItem("Guild");
+    localStorage.removeItem("Profession");
     localStorage.removeItem("img");
 }
 

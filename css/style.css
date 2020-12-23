@@ -145,10 +145,17 @@ h1{
 	background-color: grey;
 }
 
-.player-name, .enemy-name, .player-lvl, .enemy-lvl, .player-guild, .player-profession{
+.player-name, .enemy-name, .player-lvl, .enemy-lvl{
 	
 	font-size: 1rem;
 	color: white;
+	text-shadow: 5px 5px 5px black;
+}
+
+.player-guild, .player-profession{
+	
+	font-size: 1rem;
+	color: rgb(0, 225, 255);
 	text-shadow: 5px 5px 5px black;
 }
 
